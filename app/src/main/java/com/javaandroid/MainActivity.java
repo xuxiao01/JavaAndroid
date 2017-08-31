@@ -27,6 +27,7 @@ import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
 import com.microsoft.azure.mobile.crashes.CrashesListener;
+import com.microsoft.azure.mobile.distribute.Distribute;
 import com.microsoft.azure.mobile.crashes.ingestion.models.ErrorAttachmentLog;
 import com.microsoft.azure.mobile.crashes.model.ErrorReport;
 import com.microsoft.azure.mobile.push.Push;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         /* Set listeners. */
         Push.setListener(new MyPushListener());
-
+        Distribute.setListener(new MyDistributeListener());
         CrashesListener customListener = new CrashesListener() {
             @Override
             public boolean shouldProcess(ErrorReport report) {
@@ -162,8 +163,8 @@ public class MainActivity extends AppCompatActivity {
         Crashes.notifyUserConfirmation(Crashes.SEND);
         Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
         //Start Mobile center
-        MobileCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-        MobileCenter.start(getApplication(), "e678a540-82f2-4c6a-9af5-491e883ba6e2", Analytics.class, Crashes.class,Push.class);
+        //MobileCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+        MobileCenter.start(getApplication(), "209f28ec-2421-495e-b7cd-41f8a3655055", Analytics.class, Crashes.class,Push.class);
 
         Log.e("installID", "" + MobileCenter.getInstallId().get());
         /* Print last crash. */
