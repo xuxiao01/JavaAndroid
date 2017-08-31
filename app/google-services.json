@@ -160,6 +160,68 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81322879575:android:f928f7cd19761b9b",
+        "android_client_info": {
+          "package_name": "com.myreact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81322879575-49n7lfdckrenfdq0d46vk2dudiir7mfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP-XUKhE-JH89W6LvFjmPq0oiBABei2jY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81322879575:android:6dc58b53f4d52d80",
+        "android_client_info": {
+          "package_name": "com.xamarin.motionevolve2015"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81322879575-49n7lfdckrenfdq0d46vk2dudiir7mfb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP-XUKhE-JH89W6LvFjmPq0oiBABei2jY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
