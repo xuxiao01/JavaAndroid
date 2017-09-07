@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e("installID", "" + MobileCenter.getInstallId().get());
         /* Print last crash. */
 
-        Analytics.trackEvent("onCreateOptionsMenu");
+        //Analytics.trackEvent("onCreateOptionsMenu");
         Analytics.trackEvent("onOptionsItemSelected");
         //nalytics.trackEvent("getPageTitle");
         super.onCreate(savedInstanceState);
