@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
         //Start Mobile center
         //MobileCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-        MobileCenter.start(getApplication(), "d6fb2ca1-432f-48bc-bd82-b9225aab51cc", Analytics.class, Crashes.class,Push.class);
+        MobileCenter.start(getApplication(), "d6fb2ca1-432f-48bc-bd82-b9225aab51cc", Analytics.class, Crashes.class,Push.class,Distribute.class);
 
         Log.e("installID", "" + MobileCenter.getInstallId().get());
         /* Print last crash. */
