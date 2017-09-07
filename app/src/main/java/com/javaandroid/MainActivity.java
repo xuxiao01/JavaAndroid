@@ -23,6 +23,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.microsoft.azure.mobile.CustomProperties;
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
                 /* Attach some text. */
-                ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+                ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.ygugjtithjbthnbhgubghbut1234567890FRGVBHVBYGVHVHHGUHTUGHUJGHTUGH     JRTHGUTGHTUJHGJGTIJGKJGTYUG  BGJTYIJTJIJJ", "text.txt");
 
                  /* Attach app icon. */
                 Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
@@ -164,8 +166,11 @@ public class MainActivity extends AppCompatActivity {
         Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
         //Start Mobile center
         //MobileCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
-        MobileCenter.start(getApplication(), "d6fb2ca1-432f-48bc-bd82-b9225aab51cc", Analytics.class, Crashes.class,Push.class,Distribute.class);
 
+        MobileCenter.start(getApplication(), "d6fb2ca1-432f-48bc-bd82-b9225aab51cc", Analytics.class, Crashes.class,Push.class,Distribute.class);
+        CustomProperties properties = new CustomProperties();
+        properties.set("color", "blue").set("score", 10);
+        MobileCenter.setCustomProperties(properties);
         Log.e("installID", "" + MobileCenter.getInstallId().get());
         /* Print last crash. */
 
