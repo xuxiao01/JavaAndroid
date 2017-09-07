@@ -59,5 +59,4 @@ public class MyDistributeListener implements DistributeListener {
 		// Return true if you are using your own dialog, false otherwise
 		return true;
 	}
-
 }
