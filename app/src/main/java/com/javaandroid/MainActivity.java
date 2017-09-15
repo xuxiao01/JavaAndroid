@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         //Start Mobile center
         //MobileCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
 
-        MobileCenter.start(getApplication(), "d6fb2ca1-432f-48bc-bd82-b9225aab51cc", Analytics.class, Crashes.class,Push.class,Distribute.class);
+        MobileCenter.start(getApplication(), "59f4d773-79ea-4c70-bca1-e08cb9198090", Analytics.class, Crashes.class,Push.class,Distribute.class);
         CustomProperties properties = new CustomProperties();
         properties.set("color", "blue").set("score", 10);
         MobileCenter.setCustomProperties(properties);
